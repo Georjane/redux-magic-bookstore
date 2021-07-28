@@ -4,9 +4,11 @@ function BooksForm() {
     e.preventDefault();
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="bookform">
+      <h2>Add A Book</h2>
       <label htmlFor="title">
-        Title:
+        Book Title:
+        <br />
         <input
           type="text"
           id="title"
@@ -14,13 +16,16 @@ function BooksForm() {
       </label>
       <br />
       <label htmlFor="category">
-        Select your favourite category
+        Select Book category
+        <br />
         <select className="form-control" id="category">
           { categories.map((category) => <option key={category}>{category}</option>)}
         </select>
       </label>
       <br />
-      <input type="submit" value="Submit" />
+      <br />
+      <br />
+      <input type="submit" value="Add a Book" />
     </form>
   );
 }

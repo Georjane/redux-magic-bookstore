@@ -6,7 +6,6 @@ function App() {
     <div>
       <BooksList />
       <BooksForm />
-      <h1>Apps</h1>
     </div>
   );
 }

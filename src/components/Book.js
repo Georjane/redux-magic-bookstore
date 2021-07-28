@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 function Book({ book }) {
-  // var row = this.props.row;
   const { id, title, category } = book;
   return (
     <tr>
