@@ -1,9 +1,12 @@
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
-function BooksList() {
+function BooksList(props) {
   const heading = ['BookID', 'title', 'category'];
-  const books = [{ id: 1, title: 'Book1', category: 'fiction' },
-    { id: 2, title: 'Book2', category: 'fiction2' }];
+  // const books = [{ id: 1, title: 'Book1', category: 'fiction' },
+  //   { id: 2, title: 'Book2', category: 'fiction2' }];
+  const { books } = props;
   return (
     <div>
       <h1>BooksLists</h1>
@@ -21,4 +24,15 @@ function BooksList() {
   );
 }
 
-export default BooksList;
+BooksList.propTypes = {
+  books: PropTypes.string.isRequired,
+  // id: PropTypes.string.isRequired,
+  // title: PropTypes.string.isRequired,
+  // category: PropTypes.string.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  books: state,
+});
+
+export default connect(mapStateToProps)(BooksList);
