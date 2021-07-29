@@ -23,7 +23,7 @@ function BooksList(props) {
 }
 
 BooksList.propTypes = {
-  books: PropTypes.string.isRequired,
+  books: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 const mapStateToProps = (state) => ({

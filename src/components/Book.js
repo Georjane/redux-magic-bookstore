@@ -12,10 +12,16 @@ function Book({ book }) {
 }
 
 Book.propTypes = {
-  book: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  book: PropTypes.objectOf(PropTypes.any).isRequired,
+  id: PropTypes.number,
+  title: PropTypes.string,
+  category: PropTypes.string,
+};
+
+Book.defaultProps = {
+  id: 0,
+  title: '',
+  category: '',
 };
 
 export default Book;
