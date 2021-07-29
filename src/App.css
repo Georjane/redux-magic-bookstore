@@ -37,3 +37,34 @@
     transform: rotate(360deg);
   }
 }
+
+.booklist,
+.bookform {
+  width: 70vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.booklist tr {
+  text-align: center;
+  height: 45px;
+}
+
+.bookform {
+  width: 40vw;
+  background-color: rgba(128, 128, 128, 0.247);
+  padding: 0 0 20px 0;
+  font-size: large;
+  border: 1px solid grey;
+  margin-bottom: 0;
+}
+
+.bookform input,
+.bookform select {
+  width: 250px;
+  height: 30px;
+}
