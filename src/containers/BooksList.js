@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
 function BooksList(props) {
-  const heading = ['BookID', 'Title', 'Category'];
+  const heading = ['BookID', 'Title', 'Category', 'Delete Book'];
   const { books } = props;
   return (
     <div className="booklist">

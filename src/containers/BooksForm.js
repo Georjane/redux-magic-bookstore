@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { CREATE_BOOK } from '../actions/index';
+// import { REMOVE_BOOK } from '../actions/index';
 
 class BooksForm extends React.Component {
   constructor(props) {
