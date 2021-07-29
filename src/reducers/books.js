@@ -9,7 +9,7 @@ const bookReducer = (state, action) => {
     case 'REMOVE_BOOK': {
       const newState = [...state];
       newState.forEach((i) => {
-        if (i[0].id === action.payload.id) {
+        if (i.id === action.payload.id) {
           const index = newState.indexOf(i);
           if (index > -1) {
             newState.splice(index, 1);
