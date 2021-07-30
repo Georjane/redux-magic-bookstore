@@ -8,10 +8,8 @@ import CategoryFilter from '../components/CategoryFilter';
 function BooksList(props) {
   const heading = ['BookID', 'Title', 'Category', 'Delete Book'];
   const { booksInfo, filterInfo } = props;
-  console.log(filterInfo);
   const { books } = booksInfo;
   const { filter } = filterInfo;
-  console.log(filter);
   const handleRemoveBook = (e) => {
     const { param } = e.target.dataset;
     let deletebook;
@@ -23,10 +21,18 @@ function BooksList(props) {
     const { REMOVE_BOOK } = props;
     REMOVE_BOOK(deletebook);
   };
+
+  function filterByCategory(book) {
+    if (filter === 'All') {
+      return book;
+    }
+    return book.category === filter;
+  }
+  const filteredBooks = books.filter(filterByCategory);
+
   return (
     <div className="booklist">
       <h1>BooksLists</h1>
-      {/* <CategoryFilter filter={filter} CHANGE_FILTER={CHANGE_FILTER} /> */}
       <CategoryFilter />
       <table style={{ width: 500 }}>
         <thead>
@@ -35,7 +41,7 @@ function BooksList(props) {
           </tr>
         </thead>
         <tbody>
-          {books.map((book) => (
+          {filteredBooks.map((book) => (
             <Book
               book={book}
               key={book.id}
