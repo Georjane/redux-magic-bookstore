@@ -15,7 +15,7 @@ function CategoryFilter(props) {
 
   return (
     <label htmlFor="filter" className="filter">
-      Select Filter:
+      Filter by Category:
       {' '}
       <select
         className="form-control"
