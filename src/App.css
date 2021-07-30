@@ -57,10 +57,6 @@ nav .logo {
   font-family: Montserrat, sans-serif;
   font-size: 1.875rem;
   font-weight: bolder;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
 }
 
 .logo h3,
@@ -127,10 +123,6 @@ tr {
   opacity: 0.5;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: #121212;
 }
@@ -141,10 +133,6 @@ tr {
   margin: 0.188rem 20.188rem 0 0;
   font-family: RobotoSlab, sans-serif;
   font-size: 1.375rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.2px;
   color: #121212;
 }
@@ -156,10 +144,6 @@ tr {
   font-family: RobotoSlab, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #4e97ff;
 }
 
@@ -175,10 +159,6 @@ tr {
   font-family: RobotoSlab, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #4e97ff;
   background-color: white;
   border: none;
@@ -216,10 +196,6 @@ tr {
   font-family: Montserrat, sans-serif;
   font-size: 2rem;
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
 }
 
 .div2 span span {
@@ -228,10 +204,6 @@ tr {
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
 }
 
 .current {
@@ -242,10 +214,6 @@ tr {
   font-family: RobotoSlab, sans-serif;
   font-size: 0.813rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #121212;
 }
 
@@ -256,9 +224,6 @@ tr {
   font-family: RobotoSlab, sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.4px;
   color: #121212;
 }
@@ -291,10 +256,6 @@ hr {
   margin: 1.813rem 32.75rem 1.188rem 0;
   font-family: Montserrat, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.18px;
   color: rgb(65, 64, 64);
 }
