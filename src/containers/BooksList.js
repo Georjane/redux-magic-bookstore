@@ -9,6 +9,12 @@ function BooksList(props) {
   const { booksInfo, filterInfo } = props;
   const { books } = booksInfo;
   const { filter } = filterInfo;
+
+  const handleFilterChange = (newFilter) => {
+    const { CHANGE_FILTER } = props;
+    CHANGE_FILTER(newFilter);
+  };
+
   const handleRemoveBook = (e) => {
     const { param } = e.target.dataset;
     let deletebook;
@@ -32,7 +38,7 @@ function BooksList(props) {
   return (
     <div className="booklist">
       <h1>BooksLists</h1>
-      <CategoryFilter />
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       <table style={{ width: 500 }}>
         <thead>
           <tr>
@@ -57,6 +63,7 @@ BooksList.propTypes = {
   booksInfo: PropTypes.objectOf(PropTypes.any).isRequired,
   filterInfo: PropTypes.objectOf(PropTypes.any).isRequired,
   REMOVE_BOOK: PropTypes.func.isRequired,
+  CHANGE_FILTER: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({

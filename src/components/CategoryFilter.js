@@ -1,16 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { CHANGE_FILTER } from '../actions/index';
 
 function CategoryFilter(props) {
-  const { CHANGE_FILTER } = props;
-  let newFilter;
+  const { handleFilterChange } = props;
   const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-  const handleFilterChange = (e) => {
-    newFilter = e.target.value;
-    CHANGE_FILTER(newFilter);
+  const handler = (e) => {
+    const newFilter = e.target.value;
+    handleFilterChange(newFilter);
   };
 
   return (
@@ -20,7 +17,7 @@ function CategoryFilter(props) {
       <select
         className="form-control"
         id="filter"
-        onChange={handleFilterChange}
+        onChange={handler}
       >
         { categories.map((category) => <option key={category}>{category}</option>)}
       </select>
@@ -29,15 +26,7 @@ function CategoryFilter(props) {
 }
 
 CategoryFilter.propTypes = {
-  CHANGE_FILTER: PropTypes.func.isRequired,
+  handleFilterChange: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({
-  booksInfo: state.filterReducer,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  CHANGE_FILTER: (filter) => { dispatch(CHANGE_FILTER(filter)); },
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(CategoryFilter);
+export default CategoryFilter;
