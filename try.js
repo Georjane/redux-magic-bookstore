@@ -6,17 +6,20 @@ const initialState = {
   ],
   filter: 'All',
 };
+const { filter } = initialState
+// const bookks = initialState['books']
+console.log(filter);
 
-const state = {...initialState}
-const state1 = {...initialState, 'books': [...initialState['books'], {id:1, title:'jane', category:'smart'}]}
-state1['books'].forEach(book => {
+const state = { ...initialState };
+const state1 = { ...initialState, books: [...initialState.books, { id: 1, title: 'jane', category: 'smart' }] };
+state1.books.forEach((book) => {
   if (book.id === 50) {
-    const index = state1['books'].indexOf(book);
+    const index = state1.books.indexOf(book);
     if (index > -1) {
-      state1['books'].splice(index, 1);
+      state1.books.splice(index, 1);
     }
   }
 });
 
 // console.log(state);
-console.log(state1);
+// console.log(state1);

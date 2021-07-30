@@ -73,7 +73,7 @@ BooksForm.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  books: state,
+  booksInfo: state,
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -5,7 +5,8 @@ import { REMOVE_BOOK } from '../actions/index';
 
 function BooksList(props) {
   const heading = ['BookID', 'Title', 'Category', 'Delete Book'];
-  const { books } = props;
+  const { booksInfo } = props;
+  const { books } = booksInfo;
   const handleRemoveBook = (e) => {
     const { param } = e.target.dataset;
     let deletebook;
@@ -41,12 +42,17 @@ function BooksList(props) {
 }
 
 BooksList.propTypes = {
+  booksInfo: PropTypes.objectOf(PropTypes.any).isRequired,
   REMOVE_BOOK: PropTypes.func.isRequired,
-  books: PropTypes.arrayOf(PropTypes.any).isRequired,
+  books: PropTypes.arrayOf(PropTypes.any),
+};
+
+BooksList.defaultProps = {
+  books: [],
 };
 
 const mapStateToProps = (state) => ({
-  books: state,
+  booksInfo: state,
 });
 
 const mapDispatchToProps = (dispatch) => ({
