@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { REMOVE_BOOK, CHANGE_FILTER } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
-// import { CHANGE_FILTER } from '../actions/index';
 
 function BooksList(props) {
   const heading = ['BookID', 'Title', 'Category', 'Delete Book'];
@@ -58,11 +57,6 @@ BooksList.propTypes = {
   booksInfo: PropTypes.objectOf(PropTypes.any).isRequired,
   filterInfo: PropTypes.objectOf(PropTypes.any).isRequired,
   REMOVE_BOOK: PropTypes.func.isRequired,
-  // books: PropTypes.arrayOf(PropTypes.any),
-};
-
-BooksList.defaultProps = {
-  // books: [],
 };
 
 const mapStateToProps = (state) => ({

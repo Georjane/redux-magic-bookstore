@@ -1,8 +1,8 @@
 const initialState = {
   books: [
-    { id: Math.floor(Math.random() * 100), title: 'On Becoming', category: 'Literature' },
-    { id: Math.floor(Math.random() * 100), title: 'Rich Dad, Poor Dad', category: 'Business' },
-    { id: Math.floor(Math.random() * 100), title: 'Think Big', category: 'Motivation' },
+    { id: Math.floor(Math.random() * 100), title: 'On Becoming', category: 'Learning' },
+    { id: Math.floor(Math.random() * 100), title: 'Rich Dad, Poor Dad', category: 'Sci-Fi' },
+    { id: Math.floor(Math.random() * 100), title: 'Think Big', category: 'History' },
   ],
   filter: 'All',
 };
