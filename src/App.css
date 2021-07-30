@@ -28,16 +28,6 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 body {
   background-color: #F5F6FA;
 }
@@ -78,10 +68,7 @@ nav .logo {
   font-family: Montserrat;
   font-size: 0.813rem;
   font-weight: bolder;
-  /* font-stretch: normal; */
   font-style: normal;
-  /* line-height: normal; */
-  /* letter-spacing: 1.9px; */
   color: rgb(70, 68, 68);
 }
 
@@ -103,13 +90,9 @@ main {
 }
 
 .booklist {
-  /* width: 70vw; */
-  /* margin: auto; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* margin-bottom: 70px; */
 }
 
 tr {
@@ -148,7 +131,7 @@ tr {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--black-two);
+  color: #121212;
 }
 .title{
   width: inherit;
@@ -207,7 +190,6 @@ tr {
 }
 
 .div2 {
-  /* width: 30%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,14 +203,11 @@ tr {
   border-style: solid;
   border-width: 5px;
   border-radius: 50%;
-  /* border-image-source: linear-gradient(to bottom, #307bbe, #379cf6); */
   border-image-slice: 1;
   color: #4E97FF;
 }
 
 .div2 p {
-  /* width: 4.25rem;
-  height: 2.438rem; */
   margin: 0.063rem 5.75rem 0 0.688rem;
   font-family: Montserrat;
   font-size: 2rem;
@@ -240,8 +219,6 @@ tr {
 }
 
 .div2 span span {
-  /* width: 5rem; */
-  /* height: 1.125rem; */
   margin: 0 4.938rem 0.75rem 0.75rem;
   opacity: 0.5;
   font-family: Montserrat;
@@ -265,7 +242,7 @@ tr {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--black-two);
+  color: #121212;
 }
 
 .chapter {
@@ -279,7 +256,7 @@ tr {
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.4px;
-  color: var(--black-two);
+  color: #121212;
 }
 
 .updatebtn {
@@ -318,23 +295,19 @@ align-items: center;
   color: rgb(65, 64, 64);
 }
 .booktitle input{
-  /* width: 41.5rem; */
-  /* height: 2.813rem; */
-  /* margin: 1.188rem 2.125rem 0 0; */
   padding: 0.813rem 15.688rem 0.813rem 1.063rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: white;
   color: red;
 }
-.booktitle input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.booktitle input::placeholder { 
   color: grey;
 }
 
 .bookcat select {
   width: 17.813rem;
   height: 2.813rem;
-  /* margin: 1.188rem 2.125rem 0; */
   padding: 0.375rem 0.938rem 0.563rem 1rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
@@ -342,27 +315,21 @@ align-items: center;
   color: grey;
 }
 
-.bookcat select option { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.bookcat select option {
   color: #000;
 }
 .submitbook {
   width: 11.5rem;
   height: 2.813rem;
-  /* margin: 1.188rem 0 0 2.125rem; */
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
   color: white;
   border: none;
   background-color: #4E97FF;
 }
-/* .bookform input,
-.bookform select {
-  width: 250px;
-  height: 30px;
-} */
 
 .filter {
   position: absolute;
-  top: 8vh;
-  right: 30vw;
+  top: 6.5vh;
+  right: 6.5vw;
 }
