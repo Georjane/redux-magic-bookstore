@@ -47,7 +47,7 @@ nav {
   margin: 0 -100px;
 }
 
-.filtercat{
+.filtercat {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -66,27 +66,6 @@ nav .logo {
   font-family: Montserrat, sans-serif;
   font-size: 1.875rem;
   font-weight: bolder;
-}
-
-.logo h3,
-.logo h4 select{
-  font-family: Montserrat, sans-serif;
-  font-size: 0.813rem;
-  font-weight: bolder;
-  font-style: normal;
-  color: rgb(70, 68, 68);
-}
-
-.logo h4 select{
-  color: rgba(70, 68, 68, 0.425);
-  border: none;
-}
-.logo h4 select option {
-  color: #000;
-}
-
-.logo h4 select option:first-child {
-  color: rgba(70, 68, 68, 0.425);
 }
 
 nav i {
@@ -278,7 +257,7 @@ hr {
 
 .booktitle input {
   padding: 0.813rem 1.063rem 0.813rem 1.063rem;
-  width: 38VW;
+  width: 38vw;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: white;
@@ -300,6 +279,28 @@ hr {
 
 .bookcat select option {
   color: #000;
+}
+
+.logo h3,
+.logo h4 select {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.813rem;
+  font-weight: bolder;
+  font-style: normal;
+  color: rgb(70, 68, 68);
+}
+
+.logo h4 select {
+  color: rgba(70, 68, 68, 0.425);
+  border: none;
+}
+
+.logo h4 select option {
+  color: #000;
+}
+
+.logo h4 select option:first-child {
+  color: rgba(70, 68, 68, 0.425);
 }
 
 .submitbook {
