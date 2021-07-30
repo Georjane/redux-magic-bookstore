@@ -5,7 +5,6 @@ import { REMOVE_BOOK, CHANGE_FILTER } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
 function BooksList(props) {
-  // const heading = ['BookID', 'Title', 'Category', 'Delete Book'];
   const { booksInfo, filterInfo } = props;
   const { books } = booksInfo;
   const { filter } = filterInfo;
@@ -28,7 +27,7 @@ function BooksList(props) {
   };
 
   function filterByCategory(book) {
-    if (filter === 'All') {
+    if (filter === 'All' || filter === 'CATEGORIES') {
       return book;
     }
     return book.category === filter;
@@ -39,11 +38,6 @@ function BooksList(props) {
     <div className="booklist">
       <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
-        {/* <thead>
-          <tr>
-            {heading.map((head) => <th key={head}>{head}</th>)}
-          </tr>
-        </thead> */}
         <tbody>
           {filteredBooks.map((book) => (
             <Book
