@@ -11,7 +11,7 @@ Magic-books Inc. is a fictional company based in Germany. They have requested he
 - Milestone 6 (optional): Backend 
 
 ## Magic Bookstore Screenshot
-![]()
+![Bookstore](./bookstore.png)
 
 ## Live Link on Heroku
 - [Magic Bookstore](https://redux-magic-bookstore.herokuapp.com/)

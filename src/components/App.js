@@ -3,9 +3,12 @@ import BooksList from '../containers/BooksList';
 
 function App() {
   return (
-    <div>
-      <BooksList />
-      <BooksForm />
+    <div className="root">
+      <main>
+        <BooksList />
+        <hr />
+        <BooksForm />
+      </main>
     </div>
   );
 }
