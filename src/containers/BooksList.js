@@ -1,11 +1,20 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { REMOVE_BOOK } from '../actions/index';
+import { REMOVE_BOOK, CHANGE_FILTER } from '../actions/index';
+import CategoryFilter from '../components/CategoryFilter';
 
 function BooksList(props) {
   const heading = ['BookID', 'Title', 'Category', 'Delete Book'];
-  const { books } = props;
+  const { booksInfo, filterInfo } = props;
+  const { books } = booksInfo;
+  const { filter } = filterInfo;
+
+  const handleFilterChange = (newFilter) => {
+    const { CHANGE_FILTER } = props;
+    CHANGE_FILTER(newFilter);
+  };
+
   const handleRemoveBook = (e) => {
     const { param } = e.target.dataset;
     let deletebook;
@@ -17,9 +26,19 @@ function BooksList(props) {
     const { REMOVE_BOOK } = props;
     REMOVE_BOOK(deletebook);
   };
+
+  function filterByCategory(book) {
+    if (filter === 'All') {
+      return book;
+    }
+    return book.category === filter;
+  }
+  const filteredBooks = books.filter(filterByCategory);
+
   return (
     <div className="booklist">
       <h1>BooksLists</h1>
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       <table style={{ width: 500 }}>
         <thead>
           <tr>
@@ -27,7 +46,7 @@ function BooksList(props) {
           </tr>
         </thead>
         <tbody>
-          {books.map((book) => (
+          {filteredBooks.map((book) => (
             <Book
               book={book}
               key={book.id}
@@ -41,16 +60,20 @@ function BooksList(props) {
 }
 
 BooksList.propTypes = {
+  booksInfo: PropTypes.objectOf(PropTypes.any).isRequired,
+  filterInfo: PropTypes.objectOf(PropTypes.any).isRequired,
   REMOVE_BOOK: PropTypes.func.isRequired,
-  books: PropTypes.arrayOf(PropTypes.any).isRequired,
+  CHANGE_FILTER: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  books: state,
+  booksInfo: state.bookReducer,
+  filterInfo: state.filterReducer,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   REMOVE_BOOK: (book) => { dispatch(REMOVE_BOOK(book)); },
+  CHANGE_FILTER: (filter) => { dispatch(CHANGE_FILTER(filter)); },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
