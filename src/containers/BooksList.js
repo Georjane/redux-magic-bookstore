@@ -1,10 +1,22 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import { REMOVE_BOOK } from '../actions/index';
 
 function BooksList(props) {
-  const heading = ['BookID', 'Title', 'Category'];
+  const heading = ['BookID', 'Title', 'Category', 'Delete Book'];
   const { books } = props;
+  const handleRemoveBook = (e) => {
+    const { param } = e.target.dataset;
+    let deletebook;
+    books.forEach((book) => {
+      if (parseInt(book.id, 10) === parseInt(param, 10)) {
+        deletebook = book;
+      }
+    });
+    const { REMOVE_BOOK } = props;
+    REMOVE_BOOK(deletebook);
+  };
   return (
     <div className="booklist">
       <h1>BooksLists</h1>
@@ -15,7 +27,13 @@ function BooksList(props) {
           </tr>
         </thead>
         <tbody>
-          {books.map((book) => <Book book={book} key={book.id} />)}
+          {books.map((book) => (
+            <Book
+              book={book}
+              key={book.id}
+              handleRemoveBook={handleRemoveBook}
+            />
+          ))}
         </tbody>
       </table>
     </div>
@@ -23,11 +41,16 @@ function BooksList(props) {
 }
 
 BooksList.propTypes = {
-  books: PropTypes.string.isRequired,
+  REMOVE_BOOK: PropTypes.func.isRequired,
+  books: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 const mapStateToProps = (state) => ({
   books: state,
 });
 
-export default connect(mapStateToProps)(BooksList);
+const mapDispatchToProps = (dispatch) => ({
+  REMOVE_BOOK: (book) => { dispatch(REMOVE_BOOK(book)); },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
