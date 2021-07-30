@@ -38,22 +38,219 @@
   }
 }
 
+body {
+  background-color: #F5F6FA;
+}
+
+.root {
+  background-color: #FFFFFF;
+  margin: 6.25rem;
+  box-shadow: 50px 50px 20px #afabab36;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6.25rem;
+}
+
+nav .logo {
+ display: flex;
+ width: 35%;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.logo h1 {
+  color: #4E97FF;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-weight: bolder;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.logo h3,
+.logo h4 {
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: bolder;
+  /* font-stretch: normal; */
+  font-style: normal;
+  /* line-height: normal; */
+  /* letter-spacing: 1.9px; */
+  color: rgb(70, 68, 68);
+}
+
+.logo h4 {
+  color: rgba(70, 68, 68, 0.425);
+}
+
+nav i {
+  padding: 0.875rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+  color: #4E97FF;
+}
+main {
+  background-color: #FAFAFA;
+  padding: 0 6.25rem;
+  padding-top: 20px;
+}
+
 .booklist,
 .bookform {
-  width: 70vw;
-  margin: auto;
+  /* width: 70vw; */
+  /* margin: auto; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* align-items: center; */
+  /* margin-bottom: 70px; */
+}
+
+tr {
+  height: 10.625rem;
+  border-radius: 4px;
+  border: solid 1px white;
+  margin-bottom: 50px;
+}
+
+.eachbook {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 70px;
+  background-color: white;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  margin-bottom: 0.983rem;
 }
 
-.booklist tr {
-  text-align: center;
-  height: 45px;
+.div1 {
+  width: 40%;
 }
 
+.category{
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+.title{
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+.removebtn{
+  display: flex;
+  width: 15rem;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.removebtn button {
+  /* height: 1.188rem; */
+  /* margin: 0.188rem 0.938rem 0.125rem 0; */
+  margin-top: 1.8rem;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  background-color: white;
+  border: none;
+  padding-right: 1.35rem;
+  border-right: 1px solid gray;
+}
+
+.removebtn :last-child {
+  border: none;
+}
+
+.div2 {
+  /* width: 30%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgb(211, 210, 210);
+}
+
+
+.div2 i {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 50%;
+  /* border-image-source: linear-gradient(to bottom, #307bbe, #379cf6); */
+  border-image-slice: 1;
+  color: #4386bf;
+}
+
+.div2 p {
+  /* width: 4.25rem;
+  height: 2.438rem; */
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.div2 span span {
+  /* width: 5rem; */
+  /* height: 1.125rem; */
+  margin: 0 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
 .bookform {
   width: 40vw;
   background-color: rgba(128, 128, 128, 0.247);
