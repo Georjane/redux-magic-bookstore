@@ -1,6 +1,25 @@
-const bookReducer = (state, action) => {
+const initialState = {
+  books: [
+    { id: Math.floor(Math.random() * 100), title: 'On Becoming', category: 'Literature' },
+    { id: Math.floor(Math.random() * 100), title: 'Rich Dad, Poor Dad', category: 'Business' },
+    { id: Math.floor(Math.random() * 100), title: 'Think Big', category: 'Motivation' },
+  ],
+  filter: 'All',
+};
+
+const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
+      if (state.books === undefined) {
+        return {
+          ...state,
+          books: [{
+            id: action.payload.id,
+            title: action.payload.title,
+            category: action.payload.category,
+          }],
+        };
+      }
       return {
         ...state,
         books: [...state.books, {
@@ -9,6 +28,7 @@ const bookReducer = (state, action) => {
           category: action.payload.category,
         }],
       };
+
     case 'REMOVE_BOOK': {
       const newState = { ...state };
       newState.books.forEach((book) => {
