@@ -6,9 +6,10 @@ const initialState = {
   ],
   filter: 'All',
 };
-const { filter } = initialState
+// const { filter } = initialState
 // const bookks = initialState['books']
-console.log(filter);
+const newInt = {...initialState, filter: 'new filter'}
+console.log(newInt);
 
 const state = { ...initialState };
 const state1 = { ...initialState, books: [...initialState.books, { id: 1, title: 'jane', category: 'smart' }] };
