@@ -24,9 +24,9 @@ function Book(props) {
           </span>
         </div>
         <div className="div3">
-          <p>CURRENT CHAPTER</p>
-          <p>Chapter 17</p>
-          <button type="button">UPDATE PROGRESS</button>
+          <p className="current">CURRENT CHAPTER</p>
+          <p className="chapter">Chapter 17</p>
+          <button type="button" className="updatebtn">UPDATE PROGRESS</button>
         </div>
       </td>
       {/* <td key={id}>{id}</td>
