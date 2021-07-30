@@ -14,7 +14,7 @@ function CategoryFilter(props) {
   };
 
   return (
-    <label htmlFor="filter" className="filter">
+    <label htmlFor="filter" className="filter categoryfilter">
       Filter by Category:
       {' '}
       <select
