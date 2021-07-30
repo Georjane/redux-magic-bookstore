@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 
 function Book(props) {
   const { book, handleRemoveBook } = props;
-  // console.log(handleRemoveBook);
   const { id, title, category } = book;
   return (
     <tr>
