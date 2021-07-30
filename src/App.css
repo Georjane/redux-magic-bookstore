@@ -29,11 +29,11 @@
 }
 
 body {
-  background-color: #F5F6FA;
+  background-color: #f5f6fa;
 }
 
 .root {
-  background-color: #FFFFFF;
+  background-color: #fff;
   margin: 6.25rem;
   box-shadow: 50px 50px 20px #afabab36;
 }
@@ -46,15 +46,15 @@ nav {
 }
 
 nav .logo {
- display: flex;
- width: 35%;
- justify-content: space-between;
- align-items: center;
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo h1 {
-  color: #4E97FF;
-  font-family: Montserrat;
+  color: #4e97ff;
+  font-family: Montserrat, sans-serif;
   font-size: 1.875rem;
   font-weight: bolder;
   font-stretch: normal;
@@ -65,7 +65,7 @@ nav .logo {
 
 .logo h3,
 .logo h4 {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.813rem;
   font-weight: bolder;
   font-style: normal;
@@ -80,10 +80,11 @@ nav i {
   padding: 0.875rem;
   border: solid 1px #e8e8e8;
   border-radius: 50%;
-  color: #4E97FF;
+  color: #4e97ff;
 }
+
 main {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   padding: 0 6.25rem;
   padding-top: 20px;
   padding-bottom: 150px;
@@ -119,12 +120,12 @@ tr {
   width: 65%;
 }
 
-.category{
+.category {
   width: 3.063rem;
   height: 1.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -133,11 +134,12 @@ tr {
   letter-spacing: normal;
   color: #121212;
 }
-.title{
+
+.title {
   width: inherit;
   height: 1.813rem;
   margin: 0.188rem 20.188rem 0 0;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -151,16 +153,17 @@ tr {
   width: 6.688rem;
   height: 1.188rem;
   margin: 0.25rem 0 0;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4E97FF;
+  color: #4e97ff;
 }
-.removebtn{
+
+.removebtn {
   display: flex;
   width: 15rem;
   justify-content: space-between;
@@ -169,22 +172,24 @@ tr {
 
 .removebtn button {
   margin-top: 1.8rem;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4E97FF;
+  color: #4e97ff;
   background-color: white;
   border: none;
   padding-right: 1.35rem;
   border-right: 1px solid rgb(218, 214, 214);
 }
+
 .removebtn :first-child {
   padding-left: 0;
 }
+
 .removebtn :last-child {
   border: none;
 }
@@ -196,7 +201,6 @@ tr {
   border-right: 1px solid rgb(211, 210, 210);
 }
 
-
 .div2 i {
   width: 3.8rem;
   height: 3.8rem;
@@ -204,12 +208,12 @@ tr {
   border-width: 5px;
   border-radius: 50%;
   border-image-slice: 1;
-  color: #4E97FF;
+  color: #4e97ff;
 }
 
 .div2 p {
   margin: 0.063rem 5.75rem 0 0.688rem;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -221,7 +225,7 @@ tr {
 .div2 span span {
   margin: 0 4.938rem 0.75rem 0.75rem;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   font-weight: normal;
   font-stretch: normal;
@@ -231,11 +235,11 @@ tr {
 }
 
 .current {
-  width: 7.875rem;
+  width: max-content;
   height: 1.125rem;
   margin: 0.063rem 3.625rem 0 3.688rem;
   opacity: 0.5;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
@@ -246,10 +250,10 @@ tr {
 }
 
 .chapter {
-  width: 4.688rem;
+  width: max-content;
   height: 1.313rem;
   margin: 0.438rem 6.813rem 0.25rem 3.688rem;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -267,7 +271,7 @@ tr {
   border-radius: 3px;
   color: rgba(255, 255, 255, 0.63);
   border: none;
-  background-color: #4E97FF;
+  background-color: #4e97ff;
 }
 
 hr {
@@ -276,16 +280,16 @@ hr {
 }
 
 .bookform {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .addbook {
   width: 10.875rem;
   height: 1.5rem;
   margin: 1.813rem 32.75rem 1.188rem 0;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   font-stretch: normal;
@@ -294,14 +298,16 @@ align-items: center;
   letter-spacing: -0.18px;
   color: rgb(65, 64, 64);
 }
-.booktitle input{
+
+.booktitle input {
   padding: 0.813rem 15.688rem 0.813rem 1.063rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: white;
   color: red;
 }
-.booktitle input::placeholder { 
+
+.booktitle input::placeholder {
   color: grey;
 }
 
@@ -318,6 +324,7 @@ align-items: center;
 .bookcat select option {
   color: #000;
 }
+
 .submitbook {
   width: 11.5rem;
   height: 2.813rem;
@@ -325,7 +332,7 @@ align-items: center;
   border-radius: 3px;
   color: white;
   border: none;
-  background-color: #4E97FF;
+  background-color: #4e97ff;
 }
 
 .filter {
