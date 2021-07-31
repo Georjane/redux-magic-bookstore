@@ -5,6 +5,7 @@ const initialState = {
     { id: Math.floor(Math.random() * 100), title: 'Think Big', category: 'History' },
   ],
   filter: 'All',
+  foods: ['rice', 'chicken'],
 };
 
 const bookReducer = (state = initialState, action) => {
@@ -39,6 +40,10 @@ const bookReducer = (state = initialState, action) => {
           }
         }
       });
+      return newState;
+    }
+    case 'LIST_FOOD': {
+      const newState = { ...state, foods: [...state.foods, ...action.payload] };
       return newState;
     }
     default:

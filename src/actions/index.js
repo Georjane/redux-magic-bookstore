@@ -12,3 +12,12 @@ export const CHANGE_FILTER = (filter) => ({
   type: 'CHANGE_FILTER',
   payload: filter,
 });
+
+export const LIST_FOOD = (foods) => ({
+  type: 'LIST_FOOD',
+  payload: foods,
+  meta: {
+    type: 'api',
+    url: 'www.themealdb.com/api/json/v1/1/categories.php',
+  },
+});
