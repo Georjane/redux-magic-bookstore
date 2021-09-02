@@ -1,6 +1,9 @@
 export const CREATE_BOOK = (book) => ({
   type: 'CREATE_BOOK',
   payload: book,
+  meta: {
+    type: 'api',
+  },
 });
 
 export const REMOVE_BOOK = (book) => ({

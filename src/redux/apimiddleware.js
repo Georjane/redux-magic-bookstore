@@ -2,6 +2,7 @@ const apiMiddleware = (store) => (next) => (action) => {
   if (!action.meta || action.meta.type !== 'api') {
     return next(action);
   }
+
   // This is an api request
   const apiUrl = 'https://www.themealdb.com/api/json/v1/1/categories.php';
   return fetch(apiUrl)
