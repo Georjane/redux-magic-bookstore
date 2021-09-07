@@ -13,19 +13,19 @@ import apiMiddleware from './redux/apimiddleware';
 console.log('yes');
 axios({
   method: 'post',
-  url: 'http://localhost:3000/books',
-  data: {
-    title: 'Rich Dad Poor Dad',
-    author: 'Kiyoski',
-    category: 'Business',
+  url: 'http://localhost:3000/sign_up',
+  user: {
+    username: 'Leon',
+    password: 'leonleon',
+    password_confirmation: 'leonleon',
   },
 });
-axios
-  .get('http://localhost:3000/books', { mode: 'no-cors' })
-  .then((response) => {
-    const { data } = response;
-    console.log(data);
-  });
+// axios
+//   .get('http://localhost:3000/books', { mode: 'no-cors' })
+//   .then((response) => {
+//     const { data } = response;
+//     console.log(data);
+//   });
 const store = createStore(rootReducer, applyMiddleware(apiMiddleware));
 ReactDOM.render(
   <Provider store={store}>
