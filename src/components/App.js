@@ -1,60 +1,69 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import axios from 'axios';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Login from './Login';
+import Signup from './Signup';
+import Home from './Home';
+
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       isLoggedIn: false,
-      user: {}
-     };
-  };
+      user: {},
+    };
+  }
+
+  componentDidMount() {
+    const { isLoggedIn, user } = this.state;
+    console.log(isLoggedIn);
+    console.log(user);
+
+    // this.loginStatus()
+  }
 
   handleLogin = (data) => {
     this.setState({
       isLoggedIn: true,
-      user: data.user
-    })
+      user: data.user,
+    });
   }
+
 handleLogout = () => {
-    this.setState({
+  this.setState({
     isLoggedIn: false,
-    user: {}
-    })
-  }
+    user: {},
+  });
+}
 
   loginStatus = () => {
-    axios.get('http://localhost:3000/auth/login', 
-   {withCredentials: true})    
-.then(response => {
-  console.log(response);
-      // if (response.data.logged_in) {
-      //   this.handleLogin(response)
-      // } else {
-      //   this.handleLogout()
-      // }
-    })
-    .catch(error => console.log('api errors:', error))
+    axios.get('http://localhost:3000/auth/login',
+      { withCredentials: true })
+      .then((response) => {
+        console.log(response);
+        if (response.data.logged_in) {
+          this.handleLogin(response);
+        } else {
+          this.handleLogout();
+        }
+      })
+      .catch((error) => console.log('api errors:', error));
   };
 
-  componentDidMount() {
-    this.loginStatus()
-  }
-
-render() {
+  render() {
     return (
       <div>
-         <BrowserRouter>
+        <BrowserRouter>
           <Switch>
-            <Route exact path='/' component={}/>
-            <Route exact path='/login' component={}/>
-            <Route exact path='/signup' component={}/>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
           </Switch>
         </BrowserRouter>
       </div>
     );
   }
-};
+}
 export default App;
 
 // import BooksForm from '../containers/BooksForm';

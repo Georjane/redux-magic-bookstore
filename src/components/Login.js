@@ -8,7 +8,6 @@ class Login extends Component {
     this.state = {
       username: '',
       password: '',
-      errors: '',
     };
   }
 
@@ -21,10 +20,43 @@ handleChange = (event) => {
 
 handleSubmit = (event) => {
   event.preventDefault();
+  const { username, password } = this.state;
+  const user = {
+    username,
+    password,
+  };
+
+  axios.post('http://localhost:3000/auth/login', { user }, { withCredentials: true })
+    .then((response) => {
+      console.log(response);
+    // if (response.data.logged_in) {
+    //   this.props.handleLogin(response.data)
+    //   this.redirect()
+    // } else {
+    //   this.setState({
+    //     errors: response.data.errors
+    //   })
+    // }
+    })
+    .catch((error) => console.log('api errors:', error));
 };
 
+// redirect = () => {
+//   this.props.history.push('/');
+// }
+
+// handleErrors = () => (
+//   <div>
+//     <ul>
+//       {{ errors } = this.state.errors}
+//       {errors.map((error) => <li key={error}>{error}</li>)}
+//     </ul>
+//   </div>
+// );
+
 render() {
-  const { username, password } = this.statereturn(
+  const { username, password } = this.state;
+  return (
     <div>
       <h1>Log In</h1>
       <form onSubmit={this.handleSubmit}>
@@ -52,7 +84,7 @@ render() {
         </div>
 
       </form>
-    </div>,
+    </div>
   );
 }
 }

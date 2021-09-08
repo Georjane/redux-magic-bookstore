@@ -7,8 +7,8 @@ class Signup extends Component {
     this.state = {
       username: '',
       password: '',
-      password_confirmation: '',
-      errors: '',
+      passwordConfirmation: '',
+      // errors: '',
     };
   }
 
@@ -21,11 +21,44 @@ handleChange = (event) => {
 
 handleSubmit = (event) => {
   event.preventDefault();
+  const { username, password, passwordConfirmation } = this.state;
+  const user = {
+    username,
+    password,
+    passwordConfirmation,
+  };
+  axios.post('http://localhost:3000/signup', { user }, { withCredentials: true }, { mode: 'no-cors' })
+    .then((response) => {
+      console.log(response);
+    // if (response.data.status === 'created') {
+    //   this.props.handleLogin(response.data)
+    //   this.redirect()
+    // } else {
+    //   this.setState({
+    //     errors: response.data.errors
+    //   })
+    // }
+    })
+    .catch((error) => console.log('api errors:', error));
 };
 
+// redirect = () => {
+//   this.props.history.push('/');
+// }
+
+// handleErrors = () => {
+//   return (
+//     <div>
+//       <ul>{this.state.errors.map((error) => {
+//         return key={error}>{error}</li>
+//       })}
+//       </ul>
+//     </div>
+//   )
+// };
 render() {
   const {
-    username, email, password, password_confirmation,
+    username, password, passwordConfirmation,
   } = this.state;
   return (
     <div>
@@ -49,7 +82,7 @@ render() {
           placeholder="password confirmation"
           type="password"
           name="password_confirmation"
-          value={password_confirmation}
+          value={passwordConfirmation}
           onChange={this.handleChange}
         />
 
